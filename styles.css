@@ -67,6 +67,13 @@ button {
   margin: 0 auto;
 }
 
+#architecture,
+#experience,
+#projects,
+#credentials {
+  scroll-margin-top: 94px;
+}
+
 .header {
   position: fixed;
   z-index: 30;
@@ -299,6 +306,10 @@ h1 {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.4;
+}
+
+.metrics .metric-short {
+  display: none;
 }
 
 .capabilities,
@@ -817,7 +828,7 @@ h2 {
   }
 
   .hero {
-    min-height: calc(100svh - 20px);
+    min-height: auto;
     align-items: start;
     padding-top: 124px;
     padding-bottom: 20px;
@@ -848,6 +859,17 @@ h2 {
     gap: 8px 12px;
   }
 
+  #architecture,
+  #experience,
+  #projects,
+  #credentials {
+    scroll-margin-top: 160px;
+  }
+
+  .capabilities {
+    padding-top: 52px;
+  }
+
   .capability-grid,
   .principles,
   .project-grid,
@@ -856,11 +878,31 @@ h2 {
   }
 
   .metrics {
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+    padding-bottom: 0;
   }
 
   .metrics article {
-    min-height: 94px;
+    min-height: 78px;
+    padding: 10px 7px;
+  }
+
+  .metrics strong {
+    font-size: clamp(19px, 6vw, 25px);
+  }
+
+  .metrics .metric-full {
+    display: none;
+  }
+
+  .metrics .metric-short {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 1.22;
   }
 
   .section-heading {
